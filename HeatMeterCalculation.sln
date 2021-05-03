@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMeterCalculation", "HeatMeterCalculation\HeatMeterCalculation.csproj", "{AF30BC3D-4223-42A0-876D-04B7D7B3AD68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMeterCalculationLib", "HeatMeterCalculationLib\HeatMeterCalculationLib.csproj", "{862B7A40-894A-4DB5-842A-103834F4C2C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMeterCalculationBase", "HeatMeterCalculationBase\HeatMeterCalculationBase.csproj", "{BFA745FF-3D10-4977-A873-2E7F900CB8A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF30BC3D-4223-42A0-876D-04B7D7B3AD68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF30BC3D-4223-42A0-876D-04B7D7B3AD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF30BC3D-4223-42A0-876D-04B7D7B3AD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF30BC3D-4223-42A0-876D-04B7D7B3AD68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862B7A40-894A-4DB5-842A-103834F4C2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862B7A40-894A-4DB5-842A-103834F4C2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862B7A40-894A-4DB5-842A-103834F4C2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862B7A40-894A-4DB5-842A-103834F4C2C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {091B0804-DE76-4747-BC77-FD5773CEE049}
+	EndGlobalSection
+EndGlobal
