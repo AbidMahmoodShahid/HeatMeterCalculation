@@ -9,7 +9,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
         EBAU_RUECKLAUF = 1
     }
 
-    public class Koeffizient
+    public class Koeffizient //TODO AM 01: wie wissen wir, welche koeffizient die sind? was sind nIi, nJi?
     {
         public int nIi { get; set; }
         public int nJi { get; set; }
@@ -40,7 +40,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
         public static readonly double KOR_NORMAL_GEWICHT = 8000; // konventionelle Dichte der Normalgewichtstücke
         public static readonly double VOLUME_FAKTOR = 1000;
 
-        private static readonly List<Koeffizient> KoeffizientList = new List<Koeffizient>
+        private static readonly List<Koeffizient> KoeffizientList = new List<Koeffizient>//TODO AM 01: wie wissen wir, welche koeffizient die sind? was sind nIi, nJi?
         {
             new Koeffizient ( 0, -2,  0.14632971213167),
             new Koeffizient ( 0, -1, -0.84548187169114),
@@ -78,13 +78,16 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             new Koeffizient(32, -41, -0.93537087292458E-25),
         };
 
-        private static readonly double[] cn = new[] { 9.99839564E2, 6.7998613E-2, -9.1101468E-3, 1.0058299E-4, -1.1275659E-6, 6.5985371E-9 };
-        private static readonly double[] an = new[] { 9.9983952E2, 1.6952577E1, -7.9905127E-3, -4.6241757E-5, 1.0584601E-7, -2.8103006E-10 };
-        private static readonly double b = 1.6887236E-2;
+        private static readonly double[] cn = new[] { 9.99839564E2, 6.7998613E-2, -9.1101468E-3, 1.0058299E-4, -1.1275659E-6, 6.5985371E-9 }; //TODO AM 02: welche wert ist es? dictionary mit name und wert?
+        private static readonly double[] an = new[] { 9.9983952E2, 1.6952577E1, -7.9905127E-3, -4.6241757E-5, 1.0584601E-7, -2.8103006E-10 }; //TODO AM 02: welche wert ist es? dictionary mit name und wert?
+        private static readonly double b = 1.6887236E-2; //TODO AM 02: coefficient of cubical expansion?
 
         public int m_nPlatz { get; set; }
 
-        protected double Dichte(double fT)
+
+        // ρ=ρr[1 + b(T−Tr)],
+        // where ρ is the density at temperature T and b is called coefficient of cubical expansion, evaluated at reference temperature and density(ρr and Tr).
+        protected double Dichte(double fT)//TODO AM 02: welche wert ist fT?
         {
             double fDichte = 0;
             int n;
@@ -110,7 +113,8 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             return fDichte;
         }
 
-        protected double SpezifischesVolumen(double fp, double fT)
+        // SpezifischesVolumen = 1/dichte
+        protected double SpezifischesVolumen(double fp, double fT)//TODO AM 02: welche wert ist fp, fT? summaries?
         {
             double pi;
             double tau;
@@ -142,7 +146,12 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             return fSpezVol;
         }
 
-        protected double SpezifischeEnthalpie(double fp, double fT)
+        // H = U + pV;
+        // U - inner energy
+        // p - pressure
+        // V - volume
+        // h(specific Enthaply) = H/m
+        protected double SpezifischeEnthalpie(double fp, double fT)//TODO AM 02: welche wert ist fp, fT? summaries?
         {
             double pi;
             double tau;
@@ -167,7 +176,8 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             return tau * gamma_tau * R_UNI_GAS * fT;
         }
 
-        protected double Waermekoeffizient(double fp, double _fTVor, double _fTRueck, bool bEinbauVorlauf)
+        //fWKoeff = 1 / fSpezVol* (fEnthVor - fEnthRueck) / (fTVor - fTRueck);
+        protected double Waermekoeffizient(double fp, double _fTVor, double _fTRueck, bool bEinbauVorlauf)//TODO AM 02: welche wert ist fp, _fTVor, _fTRueck? summaries?
         {
             double fSpezVol;
             double fWKoeff;
@@ -186,10 +196,12 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             fEnthRueck = SpezifischeEnthalpie(fp, fTRueck);
 
             fWKoeff = 1 / fSpezVol * (fEnthVor - fEnthRueck) / (fTVor - fTRueck);
+            //fWKoeff = 1 / (fSpezVol * (fEnthVor - fEnthRueck) * (fTVor - fTRueck)); TODO AM: the same?
 
             return fWKoeff;
         }
 
+        // fWMenge = fQMasse * (fEnthVor - fEnthRueck) * nTime / 3600; TODO AM: fQMasse? kWh?
         protected double Waermemenge(int nTime, double fQMasse, double fp, double fTVor, double fTRueck, bool bEinbauVorlauf)
         {
             double fWMenge;
@@ -206,6 +218,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             return fWMenge;
         }
 
+        //fWMenge = fWKoeff* (fTVor - fTRueck) * fVolumen;
         protected double Waermemenge(double fVolumen, double fp, double fTVor, double fTRueck, bool bEinbauVorlauf)
         {
             double fWMenge;
@@ -317,3 +330,4 @@ namespace HeatMeterCalculationLib.CalculationFunctions
         public abstract void Calculate(int nPPIx, int nKombi, int nPlaetze);
     }
 }
+
