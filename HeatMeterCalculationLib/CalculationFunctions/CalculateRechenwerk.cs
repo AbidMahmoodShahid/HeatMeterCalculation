@@ -9,6 +9,8 @@ namespace HeatMeterCalculationLib.CalculationFunctions
 
         }
 
+        //TODO AM: was kalkuliert die Rechenwerk?
+        //TODO AM: erst wird Temperatur, Volume und Energie berechnet und dann Rechenwerk von PS8 aufgerufen?
         public override void Calculate(int nPPIx, int nKombi, int nPlaetze)
         {
             double fVolumen_Ist;

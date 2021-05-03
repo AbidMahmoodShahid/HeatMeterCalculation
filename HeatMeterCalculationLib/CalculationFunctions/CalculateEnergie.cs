@@ -8,6 +8,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
         {
         }
 
+        //TODO AM: dritte wird Energie berechnet? die klasse wird von PS8 aufgerufen?
         public override void Calculate(int nPPIx, int nKombi, int nPlaetze)
         {
             double fVolumen_Ist;

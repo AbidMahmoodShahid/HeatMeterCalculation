@@ -13,7 +13,8 @@ namespace HeatMeterCalculationLib.CalculationFunctions
 
         }
 
-        public override void Calculate(int nPPIx, int nKombi, int nPlaetze)
+        //TODO AM: erst wird Temperatur berechnet? die klasse wird von PS8 aufgerufen?
+        public override void Calculate(int nPPIx, int nKombi, int nPlaetze)//TODO AM : was ist nPPIx, nKombi? nPlaetze = Anzahl der Plätze?
         {
             double fTVor_Ist;
             double fTVor_Ref;
@@ -29,11 +30,11 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             SetTempRef(nPPIx, nKombi);
 
             // Spezielle Auswertungen abh. Prüfungstyp
-            GetErgWert(nPPIx, "Temp_Vor_Ist", out fTVor_Ist);
+            GetErgWert(nPPIx, "Temp_Vor_Ist", out fTVor_Ist); //TODO AM: warum ein referenz temperatur? war das nicht gemessen? wie wird hier die error gemessen?
             GetErgWert(nPPIx, "Temp_Vor_Ref", out fTVor_Ref);
             fErr = 100 * (fTVor_Ist - fTVor_Ref) / (fTVor_Ref + T_NULL);
             SetErgWert(nPPIx, "Temp_Vor_Err", fErr);
-            GetErgWert(nPPIx, "Befund", out bBefund);
+            GetErgWert(nPPIx, "Befund", out bBefund);//TODO AM: was ist Befund?
 
             GetErgWert(nPPIx, "Temp_Rueck_Ist", out fTRueck_Ist);
             GetErgWert(nPPIx, "Temp_Rueck_Ref", out fTRueck_Ref);

@@ -8,6 +8,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
         {
         }
 
+        //TODO AM: zweite wird Volumen berechnet? die klasse wird von PS8 aufgerufen?
         public override void Calculate(int nPPIx, int nKombi, int nPlaetze)
         {
             double fVolumen_Ist;
@@ -53,7 +54,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
 
             fQ_Mut = fVolumen_Ist / fTimeMut * 3600 / VOLUME_FAKTOR;
 
-            GetErgWert(nPPIx, "Waage_Nr", out nWaage_Nr);
+            GetErgWert(nPPIx, "Waage_Nr", out nWaage_Nr); //TODO AM: gibt es nicht nur eine Waage am ende?
             GetErgWert(nPPIx, "NormalBits", out nNormalBits);
 
             // Neue Version Zeitlorrektur VOR Umrechnng
