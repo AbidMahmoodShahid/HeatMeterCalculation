@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMeterCalculationLib", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMeterCalculationBase", "HeatMeterCalculationBase\HeatMeterCalculationBase.csproj", "{BFA745FF-3D10-4977-A873-2E7F900CB8A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMeterCalculationManager", "HeatMeterCalculationManager\HeatMeterCalculationManager.csproj", "{B2FEAD74-5CFD-4E8B-8E73-41CEB93C1F05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFA745FF-3D10-4977-A873-2E7F900CB8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2FEAD74-5CFD-4E8B-8E73-41CEB93C1F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2FEAD74-5CFD-4E8B-8E73-41CEB93C1F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2FEAD74-5CFD-4E8B-8E73-41CEB93C1F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2FEAD74-5CFD-4E8B-8E73-41CEB93C1F05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
