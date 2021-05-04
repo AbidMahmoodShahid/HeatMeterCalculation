@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HeatMeterCalculationManager.Contract;
 
-namespace HeatMeterCalculationManager.Contract
+namespace HeatMeterCalculationManager.Models
 {
     /// <summary>
     /// Stores all measurements in variables.
     /// </summary>
-    public class Measurements
+    public class Measurements : IMeasurements
     {
         #region Properties
 
@@ -60,37 +56,37 @@ namespace HeatMeterCalculationManager.Contract
         #region CalculateRechenwerk
 
         //Input (werten die nur von DB gelesen werden muss)
-        public double FQref { get; private set; }
+        public double FQref { get; set; }
 
         #endregion
 
         #region CalculateTemperature
 
         //Input (werten die nur von DB gelesen werden muss)
-        public double FTVor_Ist { get; private set; }
-        public double FTVor_Ref { get; private set; }
-        public double FTRueck_Ist { get; private set; }
-        public double FTRueck_Ref { get; private set; }
+        public double FTVor_Ist { get; set; }
+        public double FTVor_Ref { get; set; }
+        public double FTRueck_Ist { get; set; }
+        public double FTRueck_Ref { get; set; }
 
 
 
         //Output
-        //public double FTDiff_Ist { get; private set; }
-        //public double FTDiff_Ref { get; private set; }
+        //public double FTDiff_Ist { get; set; }
+        //public double FTDiff_Ref { get; set; }
 
         #endregion
 
         #region CalculateVolumen
 
         //Input (werten die nur von DB gelesen werden muss)
-        public double NWaage_Nr { get; private set; }
+        public double NWaage_Nr { get; set; }
 
 
 
         //Output
-        //public double FQ { get; private set; }
-        //public double FQ_Mut { get; private set; }
-        //public double FVolumenMid { get; private set; }
+        //public double FQ { get; set; }
+        //public double FQ_Mut { get; set; }
+        //public double FVolumenMid { get; set; }
 
         #endregion
 

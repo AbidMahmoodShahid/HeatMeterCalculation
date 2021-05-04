@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeatMeterCalculationManager.Calculation
+namespace HeatMeterCalculationManager.Logic.Calculation
 {
-    class CalculateTemperature
+    internal class CalculateTemperature
     {
     }
 }

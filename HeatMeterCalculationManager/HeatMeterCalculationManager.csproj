@@ -41,23 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculation\CalculateBase.cs" />
-    <Compile Include="Calculation\CalculateEnergie.cs" />
-    <Compile Include="Calculation\CalculateRechenwerk.cs" />
-    <Compile Include="Calculation\CalculateTemperature.cs" />
-    <Compile Include="Calculation\CalculateVolume.cs" />
-    <Compile Include="Contract\Calculations.cs" />
-    <Compile Include="Contract\Measurements.cs" />
+    <Compile Include="Logic\CalculationExecution.cs" />
+    <Compile Include="Logic\Calculation\CalculateBase.cs" />
+    <Compile Include="Logic\Calculation\CalculateEnergie.cs" />
+    <Compile Include="Logic\Calculation\CalculateRechenwerk.cs" />
+    <Compile Include="Logic\Calculation\CalculateTemperature.cs" />
+    <Compile Include="Logic\Calculation\CalculateVolume.cs" />
+    <Compile Include="Contract\IHeatMeterCalculation.cs" />
+    <Compile Include="Models\Calculations.cs" />
+    <Compile Include="Contract\ICalculations.cs" />
+    <Compile Include="Contract\IMeasurements.cs" />
+    <Compile Include="Models\Measurements.cs" />
     <Compile Include="HeatMeterCalculation.cs" />
-    <Compile Include="Models\Density.cs" />
-    <Compile Include="Models\Error.cs" />
-    <Compile Include="Models\Mass.cs" />
-    <Compile Include="Models\Pressure.cs" />
-    <Compile Include="Models\Temperature.cs" />
-    <Compile Include="Models\Time.cs" />
-    <Compile Include="Models\Volume.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Logic\Validation\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

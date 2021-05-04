@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeatMeterCalculationManager.Calculation
+namespace HeatMeterCalculationManager.Contract
 {
-    class CalculateVolume
+    public interface IHeatMeterCalculation
     {
     }
 }

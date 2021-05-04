@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HeatMeterCalculationManager.Contract;
 
-namespace HeatMeterCalculationManager.Contract
+namespace HeatMeterCalculationManager.Models
 {
-    public class Calculations
+    public class Calculations : ICalculations
     {
         #region Properties
 
@@ -62,22 +58,22 @@ namespace HeatMeterCalculationManager.Contract
         #region CalculateRechenwerk
 
         //Input (werten die nur von DB gelesen werden muss)
-        //public double FQref { get; private set; }
+        //public double FQref { get; set; }
 
         #endregion
 
         #region CalculateTemperature
 
         //Output (werten die berechnet, und im DB gespeichert werden muss)
-        public double FTDiff_Ist { get; private set; }
-        public double FTDiff_Ref { get; private set; }
+        public double FTDiff_Ist { get; set; }
+        public double FTDiff_Ref { get; set; }
 
 
         //Input (werten die nur von DB gelesen werden muss)
-        //public double FTVor_Ist { get; private set; }
-        //public double FTVor_Ref { get; private set; }
-        //public double FTRueck_Ist { get; private set; }
-        //public double FTRueck_Ref { get; private set; }
+        //public double FTVor_Ist { get; set; }
+        //public double FTVor_Ref { get; set; }
+        //public double FTRueck_Ist { get; set; }
+        //public double FTRueck_Ref { get; set; }
 
         #endregion
 
@@ -85,17 +81,17 @@ namespace HeatMeterCalculationManager.Contract
 
 
         //Middle State (werten die von input werten berechnet wird aber nicht im DB gespeichert, sondern damit wird weitere Kalkulationen gemacht)
-        public double FQ { get; private set; }
-        public double FQ_Mut { get; private set; }
+        public double FQ { get; set; }
+        public double FQ_Mut { get; set; }
 
 
         //Middle State (werten die von input werten berechnet wird aber nicht im DB gespeichert, sondern damit wird weitere Kalkulationen gemacht)
-        public double FVolumenMid { get; private set; }
+        public double FVolumenMid { get; set; }
 
 
 
         //Input (werten die nur von DB gelesen werden muss)
-        //public double NWaage_Nr { get; private set; }
+        //public double NWaage_Nr { get; set; }
 
         #endregion
 
