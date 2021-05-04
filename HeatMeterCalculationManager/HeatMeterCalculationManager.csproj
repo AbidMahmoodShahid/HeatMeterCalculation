@@ -46,11 +46,18 @@
     <Compile Include="Calculation\CalculateRechenwerk.cs" />
     <Compile Include="Calculation\CalculateTemperature.cs" />
     <Compile Include="Calculation\CalculateVolume.cs" />
+    <Compile Include="Contract\Calculations.cs" />
+    <Compile Include="Contract\Measurements.cs" />
     <Compile Include="HeatMeterCalculation.cs" />
+    <Compile Include="Models\Density.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Mass.cs" />
+    <Compile Include="Models\Pressure.cs" />
+    <Compile Include="Models\Temperature.cs" />
+    <Compile Include="Models\Time.cs" />
+    <Compile Include="Models\Volume.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contract\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
