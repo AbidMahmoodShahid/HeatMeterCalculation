@@ -13,7 +13,7 @@ namespace HeatMeterCalculationManager.Logic.Calculation
 
         }
 
-        internal void Calculate(int nPlaetze, Meas)
+        internal void Calculate(int nPlaetze)
         {
 
 
