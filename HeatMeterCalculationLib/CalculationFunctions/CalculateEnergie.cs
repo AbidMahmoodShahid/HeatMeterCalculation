@@ -42,7 +42,7 @@ namespace HeatMeterCalculationLib.CalculationFunctions
             double fQ_Ges;
 
             // Liest Vorlauf und Rücklauftemperatur aus Datenbank
-            SetTempRef(nPPIx, nKombi);
+            SetTempRef(nPPIx, nKombi);//TODO AM: was sind nPPIx und nKombi und was macht SetTempRef()?
 
             // Spezielle Auswertungen abh. Prüfungstyp
             GetErgWert(nPPIx, "Temp_Vor_Ref", out fTVor);

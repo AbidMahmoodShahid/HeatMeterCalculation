@@ -8,5 +8,15 @@ namespace HeatMeterCalculationManager.Logic.Calculation
 {
     internal class CalculateEnergie
     {
+        internal CalculateEnergie()
+        {
+
+        }
+
+        internal void Calculate(int nPlaetze, Meas)
+        {
+
+
+        }
     }
 }

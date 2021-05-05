@@ -48,11 +48,21 @@
     <Compile Include="Logic\Calculation\CalculateTemperature.cs" />
     <Compile Include="Logic\Calculation\CalculateVolume.cs" />
     <Compile Include="Contract\IHeatMeterCalculation.cs" />
-    <Compile Include="Models\Calculations.cs" />
-    <Compile Include="Contract\ICalculations.cs" />
-    <Compile Include="Contract\IMeasurements.cs" />
-    <Compile Include="Models\Measurements.cs" />
+    <Compile Include="Models\Density.cs" />
+    <Compile Include="Models\GeneralParameters.cs" />
+    <Compile Include="Models\HeatEnergy.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Mass.cs" />
+    <Compile Include="Models\Calculation.cs" />
+    <Compile Include="Contract\ICalculation.cs" />
+    <Compile Include="Contract\IMeasurement.cs" />
+    <Compile Include="Models\Measurement.cs" />
     <Compile Include="HeatMeterCalculation.cs" />
+    <Compile Include="Models\Pressure.cs" />
+    <Compile Include="Models\Temperature.cs" />
+    <Compile Include="Models\Time.cs" />
+    <Compile Include="Models\Volume.cs" />
+    <Compile Include="Models\VolumeFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

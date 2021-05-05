@@ -1,6 +1,6 @@
 ﻿namespace HeatMeterCalculationManager.Contract
 {
-    public interface IMeasurements
+    public interface IMeasurement
     {
         #region Properties
 

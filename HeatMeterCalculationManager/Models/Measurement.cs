@@ -5,7 +5,7 @@ namespace HeatMeterCalculationManager.Models
     /// <summary>
     /// Stores all measurements in variables.
     /// </summary>
-    public class Measurements : IMeasurements
+    public class Measurement : IMeasurement
     {
         #region Properties
 
@@ -18,11 +18,11 @@ namespace HeatMeterCalculationManager.Models
         public double FTempBankAus { get; set; }
         public double FDruckBankEin { get; set; }
         public double FDruckBankAus { get; set; }
-        public bool BBefund { get; set; }
+        public bool BBefund { get; set; }//TODO AM: create in special class
         public double FVolumen_Ist { get; set; }
         public double FTimeMut { get; set; }
-        public int NWaageNr { get; set; }
-        public int NNormalBits { get; set; }
+        public int NWaageNr { get; set; }//TODO AM: create in special class
+        public int NNormalBits { get; set; }//TODO AM: create in special class
         public double FVolumen_Ref { get; set; }
         public double FTemp_Ref { get; set; }
         public double FTimeRef { get; set; }//multiple values: dictionary<string,double>/List<string,double> ?
@@ -30,9 +30,9 @@ namespace HeatMeterCalculationManager.Models
         public double FTempWaage { get; set; }
         public double FEn_Ist { get; set; }
         public double FQp { get; set; } //GetDoubleFromTable("Qp");
-        public int NKlasse { get; set; }//GetIntFromTable("Klasse");
-        public int Einbauort { get; set; }//NEW Property -->  GetIntFromTable("Einbauort")
-        public double DeltaTetaMin { get; set; }//NEW Property -->  GetDoubleFromTable("DeltaTetaMin")
+        public int NKlasse { get; set; }//GetIntFromTable("Klasse");//TODO AM: create in special class
+        public int Einbauort { get; set; }//NEW Property -->  GetIntFromTable("Einbauort")//TODO AM: create in special class
+        public double DeltaTetaMin { get; set; }//NEW Property -->  GetDoubleFromTable("DeltaTetaMin")//TODO AM: create in special class
 
 
         //Input + Output (werten die von DB gelesen, im program durch berechnung angepasst, und dann im DB gespeichert werden muss)
@@ -79,7 +79,7 @@ namespace HeatMeterCalculationManager.Models
         #region CalculateVolumen
 
         //Input (werten die nur von DB gelesen werden muss)
-        public double NWaage_Nr { get; set; }
+        public double NWaage_Nr { get; set; }//TODO AM: create in special class
 
 
 
@@ -92,7 +92,7 @@ namespace HeatMeterCalculationManager.Models
 
         #endregion
 
-        public Measurements()
+        public Measurement()
         {
 
         }
